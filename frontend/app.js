@@ -7,9 +7,6 @@ form.addEventListener("submit", async (event) => {
     const response = await fetch(
         `http://localhost:3000/weather?city=${city}`
     );
-    // const response = await fetch(
-    //     `https://comp1537-lab8-backend.onrender.com/weather?city=${city}`
-    // );
     const data = await response.json();
     weatherDiv.innerHTML = `
       <p>Temperature: ${data.temperature}</p>
